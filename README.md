@@ -21,8 +21,11 @@ install yarn start
 
 Para iniciar o Frontend do React utilize os comandos: 
 
-cd frontend yarn 
-install yarn start
+cd frontend 
+
+yarn install 
+
+yarn start
 
 Assim que o processo terminar, automaticamente será aberta no seu navegador a página localhost:3000 contendo o Projeto.
 
