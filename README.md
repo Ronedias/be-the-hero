@@ -1,14 +1,18 @@
-Be The Hero
-A Semana OmniStack é um workshop online produzido pela Rocketseat. Esta é a versão 11, onde Diego Fernandes nos ensina a desenvolver uma aplicação desde o backend até o frontend web e mobile com uma única linguagem, o Javascript. O nome da aplicação desenvolvida é Be The Hero, uma aplicação para cadastro de ONGs e casos cadastrados por elas para que outras pessoas possam ajudar a resolvê-los.
+# Be The Hero 🚀
 
-Clonando o Repositório
+A Semana OmniStack é um workshop online produzido pela Rocketseat. Nesta 11ª edição, Diego Fernandes nos guia no desenvolvimento de uma aplicação completa, do backend ao frontend, utilizando apenas JavaScript. O projeto criado é o Be The Hero, uma plataforma para cadastrar ONGs e seus casos, permitindo que outras pessoas ajudem a resolvê-los.
+
+## Clonando o Repositório 💻
+
 Para clonar o repositório, execute o seguinte comando no terminal:
 
-bash
-Copy code
+```bash
 git clone https://github.com/Ronedias/be-the-hero.git
-Instalação
+
+# Instalação ⚙️
 Pré-Requisitos
+Certifique-se de ter instalados os seguintes componentes:
+
 git
 node
 express
@@ -17,82 +21,60 @@ sqlite
 react
 react-native
 expo
-Clone o repositório utilizando git clone ou faça o download do repositório.
 
-Configuração do Backend
-Instalar Python
+## Configuração do Backend 🛠️
+1 -Instalar Python
 
-O sqlite3 depende do Python. Instale o Python seguindo os comandos abaixo:
-
-bash
-Copy code
+O sqlite3 requer o Python. Instale o Python com os seguintes comandos:
 sudo apt-get install -y python3
 sudo ln -s /usr/bin/python3 /usr/bin/python
 python --version
+
 Instalar Dependências e Iniciar o Backend
 
 Acesse o diretório do backend do projeto:
-
-bash
-Copy code
 cd backend
 Instale as dependências e inicie o servidor:
-
-bash
-Copy code
 yarn install
 yarn start
-Configuração do Frontend
+
+Configuração do Frontend 🌐
 Instalar Dependências e Iniciar o Frontend
 
 Acesse o diretório do frontend do projeto:
-
-bash
-Copy code
-cd frontend
+cd backend
 Instale as dependências e inicie o servidor:
-
-bash
-Copy code
 yarn install
 yarn start
-Assim que o processo terminar, automaticamente será aberta no seu navegador a página localhost:3000 contendo o projeto.
 
-Configuração do Mobile
-Configurar Endereço do Servidor
+Após o processo, a página será automaticamente aberta no seu navegador em localhost:3000
 
-No arquivo src/services/api.js, coloque o endereço do seu servidor (ou computador).
+# Configuração do Mobile 📱
+1.Configurar Endereço do Servidor
 
-Instalar Expo CLI (se necessário)
+No arquivo src/services/api.js, ajuste o endereço do seu servidor (ou computador).
 
-Se você ainda não tiver o Expo CLI instalado, instale-o globalmente:
+2.Instalar Expo CLI (se necessário)
 
-bash
-Copy code
-yarn global add install expo-cli
+Caso ainda não tenha o Expo CLI instalado, adicione-o globalmente:
+yarn global add expo-cli
+
 Instalar Dependências e Iniciar o Mobile
 
 Acesse o diretório do mobile do projeto:
-
-bash
-Copy code
 cd mobile
-Instale as dependências e inicie o Expo:
-
-bash
-Copy code
 yarn install
 expo start
-Assim que o processo terminar, automaticamente será aberta no seu navegador a página localhost:19002. Conecte seu emulador ou teste o aplicativo por LAN: baixe o aplicativo Expo da Play Store ou App Store e escaneie o código QR. (Se não for por LAN, tente por tunnel. Espere aparecer no Metro Bundler (informações do Expo sobre o app) a mensagem "Tunnel Ready", clique em tunnel e escaneie o código QR).
+Após o processo, a página será automaticamente aberta no seu navegador em localhost:19002. Conecte seu emulador ou teste o aplicativo por LAN: baixe o aplicativo Expo da Play Store ou App Store e escaneie o código QR. (Se não for por LAN, tente o tunnel. Espere aparecer a mensagem "Tunnel Ready" no Metro Bundler e clique em "Tunnel" para escanear o código QR).
 
-Backend
-API desenvolvida em NodeJS com acesso a banco de dados relacional SQLite, utilizando Knex. As rotas para acessar a API estão no arquivo routes.js. Você pode testar as rotas antes de usar o frontend com o software Insomnia. Baixe e instale o Insomnia na sua máquina e acesse as rotas da aplicação.
+Backend 🔧
+API desenvolvida em NodeJS com acesso ao banco de dados relacional SQLite, utilizando Knex. As rotas para acessar a API estão no arquivo routes.js. Você pode testar as rotas antes de usar o frontend com o software Insomnia. Basta baixar e instalar o Insomnia e acessar as rotas da aplicação.
 
-Frontend (Web e Mobile)
+Frontend (Web e Mobile) 🌍📱
 Web
-Frontend web desenvolvido em ReactJS. Esta parte da aplicação permite entender diversos conceitos do React e do desenvolvimento web em geral. A comunicação com a API é feita através de requisições HTTP, que retornam ao frontend como um objeto JSON. Foi utilizada a biblioteca axios para realizar a comunicação com a API.
+Frontend web desenvolvido em ReactJS. Esta parte da aplicação oferece uma visão completa dos conceitos do React e do desenvolvimento web. A comunicação com a API é feita através de requisições HTTP, que retornam ao frontend como objetos JSON. Utilizamos a biblioteca axios para realizar essa comunicação.
 
-A página da aplicação Be The Hero será aberta. Nela, uma ONG poderá se cadastrar e cadastrar seus incidentes. A ONG também poderá entrar em contato com outras ONGs para ajudar nos incidentes delas.
+Ao acessar a aplicação, uma ONG poderá se cadastrar e registrar seus incidentes, além de entrar em contato com outras ONGs para oferecer ajuda.
 
 Mobile
-Desenvolvido com o framework React Native e com o Expo.
+Desenvolvido com React Native e Expo, o frontend mobile permite que você tenha uma experiência completa do aplicativo em dispositivos móveis.
