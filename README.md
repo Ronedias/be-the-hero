@@ -1,79 +1,98 @@
 Be The Hero
+A Semana OmniStack é um workshop online produzido pela Rocketseat. Esta é a versão 11, onde Diego Fernandes nos ensina a desenvolver uma aplicação desde o backend até o frontend web e mobile com uma única linguagem, o Javascript. O nome da aplicação desenvolvida é Be The Hero, uma aplicação para cadastro de ONGs e casos cadastrados por elas para que outras pessoas possam ajudar a resolvê-los.
 
-A Semana OmniStack é um workshop online produzido pela Rocketseat. Esta é a versão 11, onde o Diego Fernandes nos ensina a desenvolver uma aplicação desde o backend até o frontend web e mobile com uma única linguagem, o Javascript. O nome da aplicação desenvolvida é Be The Hero, uma aplicação para cadastro de ONGs e casos cadastrados por elas para que outras pessoas possam ajudar a resolvê-los.
-
+Clonando o Repositório
 Para clonar o repositório, execute o seguinte comando no terminal:
 
+bash
+Copy code
 git clone https://github.com/Ronedias/be-the-hero.git
-
-INSTALAÇÂO
-
+Instalação
 Pré-Requisitos
+git
+node
+express
+knex
+sqlite
+react
+react-native
+expo
+Clone o repositório utilizando git clone ou faça o download do repositório.
 
-git, node, express, knex, sqlite, react, react-native, expo
+Configuração do Backend
+Instalar Python
 
-Clone o repositório, utilizando git clone ou faça o download do repositório.
+O sqlite3 depende do Python. Instale o Python seguindo os comandos abaixo:
 
-Para iniciar o Backend do React utilize os comandos(npm ou yarn): 
-Obs: instale o python3 pois o sql lite depende dele
-voce pode instalar o python seguindo os comandos abaixo:
-# Instalar Python
+bash
+Copy code
 sudo apt-get install -y python3
-
-# Criar um link simbólico para python
 sudo ln -s /usr/bin/python3 /usr/bin/python
-
-# Verificar a versão do python
 python --version
+Instalar Dependências e Iniciar o Backend
 
-# acessando diretorio back end do projeto
-cd backend 
+Acesse o diretório do backend do projeto:
 
-yarn install 
+bash
+Copy code
+cd backend
+Instale as dependências e inicie o servidor:
 
+bash
+Copy code
+yarn install
 yarn start
+Configuração do Frontend
+Instalar Dependências e Iniciar o Frontend
 
-Para iniciar o Frontend do React utilize os comandos: 
+Acesse o diretório do frontend do projeto:
 
-cd frontend 
+bash
+Copy code
+cd frontend
+Instale as dependências e inicie o servidor:
 
-yarn install 
-
+bash
+Copy code
+yarn install
 yarn start
+Assim que o processo terminar, automaticamente será aberta no seu navegador a página localhost:3000 contendo o projeto.
 
-Assim que o processo terminar, automaticamente será aberta no seu navegador a página localhost:3000 contendo o Projeto.
+Configuração do Mobile
+Configurar Endereço do Servidor
 
-PARA O MOBILE:
+No arquivo src/services/api.js, coloque o endereço do seu servidor (ou computador).
 
-Para testar o Mobile do React Native, primeiro coloque o endereço do seu servidor (ou computador) no arquivo src/services/api.js, e depois execute os comandos:
+Instalar Expo CLI (se necessário)
 
-NÃO é preciso executar a linha de baixo caso ja tenha o Expo (CLI) instalado!
+Se você ainda não tiver o Expo CLI instalado, instale-o globalmente:
 
+bash
+Copy code
 yarn global add install expo-cli
+Instalar Dependências e Iniciar o Mobile
 
-cd mobile 
+Acesse o diretório do mobile do projeto:
 
-yarn install 
+bash
+Copy code
+cd mobile
+Instale as dependências e inicie o Expo:
 
+bash
+Copy code
+yarn install
 expo start
+Assim que o processo terminar, automaticamente será aberta no seu navegador a página localhost:19002. Conecte seu emulador ou teste o aplicativo por LAN: baixe o aplicativo Expo da Play Store ou App Store e escaneie o código QR. (Se não for por LAN, tente por tunnel. Espere aparecer no Metro Bundler (informações do Expo sobre o app) a mensagem "Tunnel Ready", clique em tunnel e escaneie o código QR).
 
-Assim que o processo terminar, automaticamente será aberta no seu navegador a página localhost:19002. Conecte seu emulador, ou teste o aplicativo por LAN: baixe o aplicativo Expo da Play Store ou App Store e em seguida escaneie o código QR. (Se não for por lan, tente por tunnel, espere aparecer no Metro Blunder (informações do Expo sobre o app) a mensagem Tunnel Ready então clique em tunnel e escaneie o código QR.
+Backend
+API desenvolvida em NodeJS com acesso a banco de dados relacional SQLite, utilizando Knex. As rotas para acessar a API estão no arquivo routes.js. Você pode testar as rotas antes de usar o frontend com o software Insomnia. Baixe e instale o Insomnia na sua máquina e acesse as rotas da aplicação.
 
-BACK-END
+Frontend (Web e Mobile)
+Web
+Frontend web desenvolvido em ReactJS. Esta parte da aplicação permite entender diversos conceitos do React e do desenvolvimento web em geral. A comunicação com a API é feita através de requisições HTTP, que retornam ao frontend como um objeto JSON. Foi utilizada a biblioteca axios para realizar a comunicação com a API.
 
-Api desenvolvida em NodeJS com acesso a banco de dados relacional = SQLite. Esta api faz uso do Knex.
+A página da aplicação Be The Hero será aberta. Nela, uma ONG poderá se cadastrar e cadastrar seus incidentes. A ONG também poderá entrar em contato com outras ONGs para ajudar nos incidentes delas.
 
-As rotas para acessar a API estão no arquivo routes.js. Você pode testar as rotas antes de usar o frontend com o software Insomnia. Você só precisa baixar e instalar o Insomnia na sua máquina, e acessar as rotas da aplicação.
-
-FRONT-END (WEB E MOBILE)
-
-Frontend web, desenvolvido em ReactJS. Nesta parte da aplicação, é possível entender diversos conceitos do React e do desenvolvimento web em geral.
-
-Além disso, é muito importante entender como a página web normalmente se comunica com a API por meio de requisições http, as quais retornam ao frontend como um objeto json. Neste caso, foi utilizada a lib axios para realizar a comunicação com a api.
-
-Com isso, a página da aplicação Be The Hero será aberta. Nela, uma ong poderá se cadastrar e cadastrar seus incidentes. A ong também poderá entrar em contato com outras ONGs para poder ajudar nos incidentes delas.
-
-MOBILE
+Mobile
 Desenvolvido com o framework React Native e com o Expo.
-
-
