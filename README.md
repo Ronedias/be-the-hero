@@ -14,8 +14,19 @@ git, node, express, knex, sqlite, react, react-native, expo
 
 Clone o repositório, utilizando git clone ou faça o download do repositório.
 
-Para iniciar o Backend do React utilize os comandos: 
+Para iniciar o Backend do React utilize os comandos(npm ou yarn): 
+Obs: instale o python3 pois o sql lite depende dele
+voce pode instalar o python seguindo os comandos abaixo:
+# Instalar Python
+sudo apt-get install -y python3
 
+# Criar um link simbólico para python
+sudo ln -s /usr/bin/python3 /usr/bin/python
+
+# Verificar a versão do python
+python --version
+
+# acessando diretorio back end do projeto
 cd backend 
 
 yarn install 
