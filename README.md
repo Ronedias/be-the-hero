@@ -25,10 +25,17 @@ expo
 ## Configuração do Backend 🛠️
 1 -Instalar Python
 
-O sqlite3 requer o Python. Instale o Python com os seguintes comandos:
-sudo apt-get install -y python3
-sudo ln -s /usr/bin/python3 /usr/bin/python
+O sqlite3 requer o Python na versão Python 3.9.19. Instale o Python com os seguintes comandos:
+
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get install python3.9
 python --version
+curl <https://bootstrap.pypa.io/get-pip.py> -o get-pip.py
+sudo python3.9 get-pip.py
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2
+sudo update-alternatives --config python3
+
 
 Instalar Dependências e Iniciar o Backend
 
