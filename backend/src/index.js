@@ -8,8 +8,8 @@ const app = express();
 
 // Configuração dos certificados SSL/TLS
 const options = {
-    key: fs.readFileSync('/home/ubuntu/ssl/privkey.pem'),
-    cert: fs.readFileSync('/home/ubuntu/ssl/fullchain.pem')
+    key: fs.readFileSync('/home/ubuntu/ssl/roneproducoes.ddns.net/privkey.pem'),
+    cert: fs.readFileSync('/home/ubuntu/ssl/roneproducoes.ddns.net/fullchain.pem')
 };
 
 app.use(cors());
