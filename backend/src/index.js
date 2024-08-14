@@ -1,11 +1,23 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
+const https = require('https');
+const fs = require('fs');
+
 const app = express();
+
+// Configuração dos certificados SSL/TLS
+const options = {
+    key: fs.readFileSync('/etc/letsencrypt/live/roneproducoes.ddns.net/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/roneproducoes.ddns.net/fullchain.pem')
+};
 
 app.use(cors());
 app.use(express.json());
 app.use(routes);
 
 
-app.listen(8243);
+// Criar o servidor HTTPS
+https.createServer(options, app).listen(8243, () => {
+    console.log('Servidor HTTPS iniciado na porta 8243');
+});
